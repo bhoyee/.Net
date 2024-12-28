@@ -1,0 +1,103 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using API.Data;
+using Microsoft.EntityFrameworkCore;
+using API.Interfaces;
+using API.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using API.Extensions;
+using API.Middleware;
+using Microsoft.AspNetCore.Identity;
+using API.Entities;
+
+namespace API
+{
+    public class Startup
+    {
+        private readonly IConfiguration _config;
+        public Startup(IConfiguration config)
+        {
+            _config = config;
+        }
+
+
+        // This method gets called by the runtime. Use this method to add services to the container.
+        // This is our Dependency Injection Container
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddApplicationServices(_config);
+            services.AddControllers();
+            services.AddCors();
+            
+          //  services.AddScoped<IUserTwoFactorTokenProvider<AppUser>, EmailTokenProvider<AppUser>>();
+            //services.AddScoped<IUserTwoFactorTokenProvider<ApplicationUser>, EmailTokenProvider<ApplicationUser>>();
+            
+            // services.AddIdentity<IdentityUser, IdentityRole>()
+            //  .AddDefaultTokenProviders();
+            services.AddIdentityServices(_config);
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
+            });
+        }
+
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // This is use to configure http pipeline
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
+
+            }
+            app.UseMiddleware<ExeceptionMiddleware>();
+
+            app.UseHttpsRedirection();
+
+            app.UseRouting();
+
+            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "emailConfirmation",
+                    pattern: "{controller=Account}/{action=ConfirmEmail}/{userId}/{code?}");
+                endpoints.MapControllerRoute(
+                    name: "passwordReset",
+                    pattern: "{controller=Account}/{action=ResetPassword}/{code?}");
+                //endpoints.MapFallbackToController("Index", "Fallback");
+            });
+
+
+            // app.UseEndpoints(endpoints =>
+            // {
+            //     endpoints.MapControllers();
+            // });
+        }
+    }
+}

@@ -1,0 +1,110 @@
+﻿@model Cell_line_laboratory.Models.EquipmentInventoryModel
+
+@{
+    ViewData["Title"] = "Create Equipment Inventory";
+}
+
+<h2>Create Equipment Inventory</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Product" class="control-label">Product Category</label>
+        <select asp-for="Product" class="form-control" id="Product" required>
+            <option value="">-- Select Here --</option>
+
+        </select>
+    </div>
+    <input type="hidden" id="SelectedProductId" name="SelectedProductId" />
+
+
+    <div class="form-group">
+        <label asp-for="ProductName"></label>
+        <input asp-for="ProductName" class="form-control" required />
+        <span asp-validation-for="ProductName" class="text-danger"></span>
+    </div>
+
+
+    <!-- Add other fields for ProductCode, ProductDescription, etc. -->
+   
+    <div class="form-group">
+        <label asp-for="ProductCode"></label>
+        <input asp-for="ProductCode" class="form-control" />
+        <span asp-validation-for="ProductCode" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ProductDescription"></label>
+        <input asp-for="ProductDescription" class="form-control" />
+        <span asp-validation-for="ProductDescription" class="text-danger"></span>
+    </div>
+   
+    <div class="form-group">
+        <label asp-for="Vendor"></label>
+        <input asp-for="Vendor" class="form-control" />
+        <span asp-validation-for="Vendor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SerialNumber"></label>
+        <input asp-for="SerialNumber" class="form-control" />
+        <span asp-validation-for="SerialNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" class="form-control" type="number" step="1"  required/>
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Amount"></label>
+        <input asp-for="Amount" class="form-control" type="number" step="0.01" required/>
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+
+
+    <!-- Add other fields as needed -->
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var dropdown = $("#Product");
+
+            $.ajax({
+                url: '/Maintenance/Get', // Replace with your API endpoint
+                type: "GET",
+                success: function (data) {
+                    console.log(data);
+
+                    $.each(data, function (index, item) {
+                        dropdown.append($('<option></option>').val(item.id).text(item.productName));
+                    });
+                }
+            });
+            dropdown.change(function () {
+                var selectedProductId = $(this).val();
+                $("#SelectedProductId").val(selectedProductId);
+            });
+        });
+    </script>
+}
+

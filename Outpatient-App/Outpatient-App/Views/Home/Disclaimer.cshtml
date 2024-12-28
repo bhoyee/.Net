@@ -1,0 +1,118 @@
+﻿@*@{
+    ViewData["Title"] = "Disclaimer";
+}
+
+<div class="kiosk-container">
+    <h1 class="display-4">Disclaimer</h1>
+    <p>Please read and accept the disclaimer.</p>
+    <button class="btn btn-success btn-lg btn-block" onclick="acceptDisclaimer()">Yes</button>
+    <button class="btn btn-danger btn-lg btn-block" onclick="rejectDisclaimer()">No</button>
+</div>
+
+
+
+<script>
+
+
+    setTimeout(function() {
+        window.location.href = "/Home/"; // Redirect to the index screen after 15 seconds
+    }, 15000);
+
+    function goToHome() {
+        window.location.href = "/Home"; // Redirect to the index screen manually
+    }
+    function acceptDisclaimer() {
+        window.location.href = '/Home/Action'; // Redirect to the next screen
+    }
+
+    function rejectDisclaimer() {
+        window.location.href = '/Home/ContactReception'; // Redirect to the reception screen
+    }
+
+
+</script>
+*@
+
+@*@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "Disclaimer";
+    var selectedLanguage = HttpContextAccessor.HttpContext.Request.Cookies["selectedLanguage"] ?? "en"; // Default to English if language is not selected
+}
+
+<div class="kiosk-container">
+    <h1 class="display-4">@($"Disclaimer - {selectedLanguage}")</h1>
+    
+    @if (selectedLanguage == "en")
+    {
+        <p>Please read and accept the disclaimer.</p>
+    }
+    else if (selectedLanguage == "fr")
+    {
+        <p>Veuillez lire et accepter la clause de non-responsabilité.</p>
+    }
+    else if (selectedLanguage == "es")
+    {
+        <p>Lea y acepte el descargo de responsabilidad, por favor.</p>
+    }
+
+    <button class="btn btn-success btn-lg btn-block" onclick="acceptDisclaimer()">Yes</button>
+    <button class="btn btn-danger btn-lg btn-block" onclick="rejectDisclaimer()">No</button>
+</div>
+
+<script>
+    setTimeout(function() {
+        goToHome();
+    }, 15000);
+
+    function goToHome() {
+        window.location.href = "/Home"; // Redirect to the index screen manually
+    }
+
+    function acceptDisclaimer() {
+        window.location.href = '/Home/Action'; // Redirect to the next screen
+    }
+
+    function rejectDisclaimer() {
+        window.location.href = '/Home/ContactReception'; // Redirect to the reception screen
+    }
+</script>
+*@
+
+@using Outpatient_App.Utilities
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Views_Home_Disclaimer> Localizer
+
+@{
+    ViewData["Title"] = Localizer["Disclaimer"];
+
+    // Get the selected language from the query parameter or use the default
+    var selectedLanguage = Context.Request.Query["lang"].ToString();
+}
+
+<div class="kiosk-container">
+    <h1 class="display-4">@Localizer["Disclaimer"]</h1>
+    <p>@Localizer["Please read and accept the disclaimer."]</p>
+    <p>By using this Outpatient Kiosk, you will be required to 
+        provide certain personal information to locate and confirm your appointment.
+        Your consent is essential for processing this information. 
+        Do you consent to your details being used and approved on the screen?</p>
+    <button class="btn btn-success btn-lg btn-block" onclick="acceptDisclaimer()">@Localizer["Yes"]</button>
+    <button class="btn btn-danger btn-lg btn-block" onclick="rejectDisclaimer()">@Localizer["No"]</button>
+</div>
+
+<script>
+    setTimeout(function() {
+        window.location.href = "/Home/"; // Redirect to the index screen after 15 seconds
+    }, 15000);
+
+    function goToHome() {
+        window.location.href = "/Home"; // Redirect to the index screen manually
+    }
+
+    function acceptDisclaimer() {
+        window.location.href = '/Home/Action?lang=' + '@selectedLanguage';
+    }
+
+    function rejectDisclaimer() {
+        window.location.href = '/Home/ContactReception?lang=' + '@selectedLanguage';
+    }
+</script>

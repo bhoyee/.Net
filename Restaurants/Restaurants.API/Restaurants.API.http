@@ -1,0 +1,58 @@
+@HostAddress = https://localhost:7063
+
+
+
+GET {{HostAddress}}/api/restaurants
+
+###
+
+GET {{HostAddress}}/api/restaurants/1007
+
+###
+
+POST {{HostAddress}}/api/restaurants
+Content-Type: application/json
+
+{
+  "Name": "Jadfy Tasty2",
+  "Description": "A culinary Naija experience like no other",
+  "Category": "African",
+  "HasDelivery": true,
+  "ContactEmail": "2foody@jadefy.com",
+  "ContactNumber": "3165-1234",
+  "City": "Lagos",
+  "Street": "A423 Main Island",
+  "PostalCode": "63-006"
+}
+
+###
+
+
+DELETE {{HostAddress}}/api/restaurants/1006
+
+###
+
+PATCH {{HostAddress}}/api/restaurants/1005
+Content-Type: application/json
+
+{
+  "Name": "Jadfy Tasty",
+  "Description": "A culinary Naija experience like no other",
+  "HasDelivery": true
+}
+
+
+###
+
+POST {{HostAddress}}/api/restaurants/1007/dishes
+Content-Type: application/json
+
+{
+  "Name": "Amala and Ewedu",
+  "Description": "Classic Yoruba dish with rich meat and local fish sauce",
+  "Price": 53,
+  "KiloCalories": 134
+  
+}
+
+###

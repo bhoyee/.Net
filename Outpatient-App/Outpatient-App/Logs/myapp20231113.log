@@ -1,0 +1,380 @@
+2023-11-13 19:28:48.147 +00:00 [INF] User profile is available. Using 'C:\Users\Bhoyee-pc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-13 19:28:49.382 +00:00 [INF] Entity Framework Core 6.0.23 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.23' with options: None
+2023-11-13 19:28:50.381 +00:00 [INF] Executed DbCommand (86ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-11-13 19:28:50.524 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-11-13 19:28:50.579 +00:00 [INF] Entity Framework Core 6.0.23 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.23' with options: None
+2023-11-13 19:28:50.616 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-11-13 19:28:50.886 +00:00 [INF] Now listening on: https://localhost:7191
+2023-11-13 19:28:50.890 +00:00 [INF] Now listening on: http://localhost:5204
+2023-11-13 19:28:50.905 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-13 19:28:50.911 +00:00 [INF] Hosting environment: Development
+2023-11-13 19:28:50.916 +00:00 [INF] Content root path: C:\Users\Bhoyee-pc\Downloads\_Projects\_c#\_asp.net-core\Outpatient-App\Outpatient-App\
+2023-11-13 19:28:51.679 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/ - -
+2023-11-13 19:28:51.790 +00:00 [INF] Entity Framework Core 6.0.23 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.23' with options: None
+2023-11-13 19:28:51.821 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-11-13 19:28:51.927 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-11-13 19:28:52.001 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-11-13 19:28:52.040 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.Index (Outpatient-App)'
+2023-11-13 19:28:52.081 +00:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:28:52.255 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.Index (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:28:52.272 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.Index (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.4577ms.
+2023-11-13 19:28:52.299 +00:00 [INF] Executing ViewResult, running view Index.
+2023-11-13 19:28:52.540 +00:00 [INF] Executed ViewResult - view Index executed in 240.5816ms.
+2023-11-13 19:28:52.552 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.Index (Outpatient-App) in 460.9618ms
+2023-11-13 19:28:52.558 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.Index (Outpatient-App)'
+2023-11-13 19:28:52.660 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/ - - - 200 - text/html;+charset=utf-8 983.5367ms
+2023-11-13 19:28:52.719 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:28:52.719 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:28:52.719 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:28:52.749 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 29.7280ms
+2023-11-13 19:28:52.756 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 36.8437ms
+2023-11-13 19:28:52.785 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 65.9150ms
+2023-11-13 19:28:55.011 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Home/LanguageSelection - -
+2023-11-13 19:28:55.063 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App)'
+2023-11-13 19:28:55.068 +00:00 [INF] Route matched with {action = "LanguageSelection", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LanguageSelection() on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:28:55.120 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:28:55.125 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.5312ms.
+2023-11-13 19:28:55.131 +00:00 [INF] Executing ViewResult, running view LanguageSelection.
+2023-11-13 19:28:55.262 +00:00 [INF] Executed ViewResult - view LanguageSelection executed in 132.3344ms.
+2023-11-13 19:28:55.267 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App) in 192.5778ms
+2023-11-13 19:28:55.273 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App)'
+2023-11-13 19:28:55.280 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Home/LanguageSelection - - - 200 - text/html;+charset=utf-8 268.2818ms
+2023-11-13 19:28:55.343 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:28:55.348 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 5.7386ms
+2023-11-13 19:28:55.365 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:28:55.367 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:28:55.369 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 4.4940ms
+2023-11-13 19:28:55.463 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 96.7183ms
+2023-11-13 19:28:56.303 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Home/Disclaimer?lang=en - -
+2023-11-13 19:28:56.326 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App)'
+2023-11-13 19:28:56.380 +00:00 [INF] Route matched with {action = "Disclaimer", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Disclaimer(System.String) on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:28:56.456 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:28:56.460 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.578ms.
+2023-11-13 19:28:56.470 +00:00 [INF] Executing ViewResult, running view Disclaimer.
+2023-11-13 19:28:56.503 +00:00 [INF] Executed ViewResult - view Disclaimer executed in 34.368ms.
+2023-11-13 19:28:56.509 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App) in 117.386ms
+2023-11-13 19:28:56.514 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App)'
+2023-11-13 19:28:56.521 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Home/Disclaimer?lang=en - - - 200 - text/html;+charset=utf-8 218.4833ms
+2023-11-13 19:28:56.555 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:28:56.560 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:28:56.561 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:28:56.561 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 6.5689ms
+2023-11-13 19:28:56.570 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 9.7029ms
+2023-11-13 19:28:56.589 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.9401ms
+2023-11-13 19:28:57.571 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Home/Action?lang=en - -
+2023-11-13 19:28:57.578 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.Action (Outpatient-App)'
+2023-11-13 19:28:57.585 +00:00 [INF] Route matched with {action = "Action", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Action() on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:28:57.640 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.Action (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:28:57.648 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.Action (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.5011ms.
+2023-11-13 19:28:57.660 +00:00 [INF] Executing ViewResult, running view Action.
+2023-11-13 19:28:57.689 +00:00 [INF] Executed ViewResult - view Action executed in 30.5899ms.
+2023-11-13 19:28:57.698 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.Action (Outpatient-App) in 105.5632ms
+2023-11-13 19:28:57.706 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.Action (Outpatient-App)'
+2023-11-13 19:28:57.714 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Home/Action?lang=en - - - 200 - text/html;+charset=utf-8 142.5901ms
+2023-11-13 19:28:57.748 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:28:57.755 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 6.9602ms
+2023-11-13 19:28:57.756 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:28:57.755 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:28:57.773 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 16.9962ms
+2023-11-13 19:28:57.789 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.1381ms
+2023-11-13 19:28:58.571 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Appointment/BookAppointment - -
+2023-11-13 19:28:58.577 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App)'
+2023-11-13 19:28:58.584 +00:00 [INF] Route matched with {action = "BookAppointment", controller = "Appointment", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookAppointment() on controller Outpatient_App.Controllers.AppointmentController (Outpatient-App).
+2023-11-13 19:28:58.630 +00:00 [INF] Executing action method Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:28:58.636 +00:00 [INF] Executed action method Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4238ms.
+2023-11-13 19:28:58.644 +00:00 [INF] Executing ViewResult, running view BookAppointment.
+2023-11-13 19:28:58.732 +00:00 [INF] Executed ViewResult - view BookAppointment executed in 89.8372ms.
+2023-11-13 19:28:58.738 +00:00 [INF] Executed action Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App) in 143.2831ms
+2023-11-13 19:28:58.745 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App)'
+2023-11-13 19:28:58.770 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Appointment/BookAppointment - - - 200 - text/html;+charset=utf-8 198.4837ms
+2023-11-13 19:28:58.817 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:28:58.824 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:28:58.824 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 7.0507ms
+2023-11-13 19:28:58.827 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:28:58.830 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 5.3471ms
+2023-11-13 19:28:58.852 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.5204ms
+2023-11-13 19:29:23.144 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7191/Appointment/BookNow application/x-www-form-urlencoded;+charset=UTF-8 52
+2023-11-13 19:29:23.151 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App)'
+2023-11-13 19:29:23.161 +00:00 [INF] Route matched with {action = "BookNow", controller = "Appointment", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookNow(System.String, System.String, System.String) on controller Outpatient_App.Controllers.AppointmentController (Outpatient-App).
+2023-11-13 19:29:23.239 +00:00 [INF] Executing action method Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:29:23.259 +00:00 [INF] Received request with dateOfBirth: 29/01/1988, surname: S, postcode: HU51PQ
+2023-11-13 19:29:23.271 +00:00 [INF] Formatted date for query: 1988-01-29
+2023-11-13 19:29:23.283 +00:00 [INF] Entity Framework Core 6.0.23 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.23' with options: None
+2023-11-13 19:29:23.437 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[@__trimmedSurname_0='?' (Size = 4000), @__formattedDateOfBirth_Date_1='?' (DbType = DateTime2), @__trimmedPostcode_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AppointmentID], [a].[CheckedIn], [a].[PatientID], [a].[ScheduledTime], [p].[PatientID], [p].[DateOfBirth], [p].[FirstName], [p].[HealthCardID], [p].[Postcode], [p].[Surname]
+FROM [Appointments] AS [a]
+INNER JOIN [Patients] AS [p] ON [a].[PatientID] = [p].[PatientID]
+WHERE (([p].[Surname] = @__trimmedSurname_0) AND (CONVERT(date, [a].[ScheduledTime]) = @__formattedDateOfBirth_Date_1)) AND ([p].[Postcode] = @__trimmedPostcode_2)
+2023-11-13 19:29:23.479 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__trimmedSurname_0='?' (Size = 4000), @__formattedDateOfBirth_Date_1='?' (DbType = DateTime2), @__trimmedPostcode_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PatientID], [p].[DateOfBirth], [p].[FirstName], [p].[HealthCardID], [p].[Postcode], [p].[Surname]
+FROM [Patients] AS [p]
+WHERE (([p].[Surname] = @__trimmedSurname_0) AND (CONVERT(date, [p].[DateOfBirth]) = @__formattedDateOfBirth_Date_1)) AND ([p].[Postcode] = @__trimmedPostcode_2)
+2023-11-13 19:29:23.509 +00:00 [INF] Patient not found. Details: Date of Birth - 1/29/1988 12:00:00 AM, Surname - S, Postcode - HU51PQ
+2023-11-13 19:29:23.517 +00:00 [INF] Executed action method Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.JsonResult in 272.2343ms.
+2023-11-13 19:29:23.534 +00:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType14`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-11-13 19:29:23.670 +00:00 [INF] Executed action Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App) in 501.4887ms
+2023-11-13 19:29:23.676 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App)'
+2023-11-13 19:29:23.680 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7191/Appointment/BookNow application/x-www-form-urlencoded;+charset=UTF-8 52 - 200 - application/json;+charset=utf-8 536.0486ms
+2023-11-13 19:34:36.259 +00:00 [INF] User profile is available. Using 'C:\Users\Bhoyee-pc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-13 19:34:37.463 +00:00 [INF] Entity Framework Core 6.0.23 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.23' with options: None
+2023-11-13 19:34:38.437 +00:00 [INF] Executed DbCommand (80ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-11-13 19:34:38.563 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-11-13 19:34:38.621 +00:00 [INF] Entity Framework Core 6.0.23 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.23' with options: None
+2023-11-13 19:34:38.638 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-11-13 19:34:38.898 +00:00 [INF] Now listening on: https://localhost:7191
+2023-11-13 19:34:38.905 +00:00 [INF] Now listening on: http://localhost:5204
+2023-11-13 19:34:38.916 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-13 19:34:38.920 +00:00 [INF] Hosting environment: Development
+2023-11-13 19:34:38.925 +00:00 [INF] Content root path: C:\Users\Bhoyee-pc\Downloads\_Projects\_c#\_asp.net-core\Outpatient-App\Outpatient-App\
+2023-11-13 19:34:39.502 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/ - -
+2023-11-13 19:34:39.612 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.Index (Outpatient-App)'
+2023-11-13 19:34:39.628 +00:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:34:39.734 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.Index (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:34:39.743 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.Index (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.6731ms.
+2023-11-13 19:34:39.754 +00:00 [INF] Executing ViewResult, running view Index.
+2023-11-13 19:34:39.903 +00:00 [INF] Executed ViewResult - view Index executed in 148.2146ms.
+2023-11-13 19:34:39.910 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.Index (Outpatient-App) in 278.8138ms
+2023-11-13 19:34:39.915 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.Index (Outpatient-App)'
+2023-11-13 19:34:39.980 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/ - - - 200 - text/html;+charset=utf-8 482.8007ms
+2023-11-13 19:34:40.000 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:34:40.000 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:34:40.000 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:34:40.005 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 5.1451ms
+2023-11-13 19:34:40.009 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 8.9608ms
+2023-11-13 19:34:40.042 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 41.9682ms
+2023-11-13 19:34:41.412 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Home/LanguageSelection - -
+2023-11-13 19:34:41.471 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App)'
+2023-11-13 19:34:41.481 +00:00 [INF] Route matched with {action = "LanguageSelection", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LanguageSelection() on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:34:41.537 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:34:41.542 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.5868ms.
+2023-11-13 19:34:41.554 +00:00 [INF] Executing ViewResult, running view LanguageSelection.
+2023-11-13 19:34:41.737 +00:00 [INF] Executed ViewResult - view LanguageSelection executed in 185.4349ms.
+2023-11-13 19:34:41.744 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App) in 250.6416ms
+2023-11-13 19:34:41.751 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App)'
+2023-11-13 19:34:41.764 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Home/LanguageSelection - - - 200 - text/html;+charset=utf-8 351.7911ms
+2023-11-13 19:34:41.827 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:34:41.833 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 6.4218ms
+2023-11-13 19:34:41.858 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:34:41.859 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:34:41.864 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 6.7960ms
+2023-11-13 19:34:41.919 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 60.6520ms
+2023-11-13 19:34:42.639 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Home/Disclaimer?lang=en - -
+2023-11-13 19:34:42.668 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App)'
+2023-11-13 19:34:42.725 +00:00 [INF] Route matched with {action = "Disclaimer", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Disclaimer(System.String) on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:34:42.839 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:34:42.847 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.5489ms.
+2023-11-13 19:34:42.856 +00:00 [INF] Executing ViewResult, running view Disclaimer.
+2023-11-13 19:34:42.894 +00:00 [INF] Executed ViewResult - view Disclaimer executed in 39.5538ms.
+2023-11-13 19:34:42.898 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App) in 159.3514ms
+2023-11-13 19:34:42.908 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App)'
+2023-11-13 19:34:42.916 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Home/Disclaimer?lang=en - - - 200 - text/html;+charset=utf-8 276.7383ms
+2023-11-13 19:34:42.966 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:34:42.972 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 5.9121ms
+2023-11-13 19:34:42.976 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:34:42.975 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:34:42.991 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 11.5487ms
+2023-11-13 19:34:43.027 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.7771ms
+2023-11-13 19:34:44.204 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Home/Action?lang=en - -
+2023-11-13 19:34:44.209 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.Action (Outpatient-App)'
+2023-11-13 19:34:44.214 +00:00 [INF] Route matched with {action = "Action", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Action() on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:34:44.258 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.Action (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:34:44.264 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.Action (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.533ms.
+2023-11-13 19:34:44.277 +00:00 [INF] Executing ViewResult, running view Action.
+2023-11-13 19:34:44.311 +00:00 [INF] Executed ViewResult - view Action executed in 35.5968ms.
+2023-11-13 19:34:44.317 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.Action (Outpatient-App) in 95.3491ms
+2023-11-13 19:34:44.326 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.Action (Outpatient-App)'
+2023-11-13 19:34:44.332 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Home/Action?lang=en - - - 200 - text/html;+charset=utf-8 128.6275ms
+2023-11-13 19:34:44.367 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:34:44.373 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 6.1392ms
+2023-11-13 19:34:44.373 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:34:44.374 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:34:44.377 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 4.4648ms
+2023-11-13 19:34:44.400 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.7872ms
+2023-11-13 19:34:45.033 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Appointment/BookAppointment - -
+2023-11-13 19:34:45.039 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App)'
+2023-11-13 19:34:45.048 +00:00 [INF] Route matched with {action = "BookAppointment", controller = "Appointment", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookAppointment() on controller Outpatient_App.Controllers.AppointmentController (Outpatient-App).
+2023-11-13 19:34:45.099 +00:00 [INF] Executing action method Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:34:45.110 +00:00 [INF] Executed action method Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.5811ms.
+2023-11-13 19:34:45.122 +00:00 [INF] Executing ViewResult, running view BookAppointment.
+2023-11-13 19:34:45.204 +00:00 [INF] Executed ViewResult - view BookAppointment executed in 83.9727ms.
+2023-11-13 19:34:45.212 +00:00 [INF] Executed action Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App) in 155.8621ms
+2023-11-13 19:34:45.217 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App)'
+2023-11-13 19:34:45.234 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Appointment/BookAppointment - - - 200 - text/html;+charset=utf-8 201.3692ms
+2023-11-13 19:34:45.261 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:34:45.265 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 3.7490ms
+2023-11-13 19:34:45.268 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:34:45.269 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:34:45.273 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 5.5627ms
+2023-11-13 19:34:45.317 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.5374ms
+2023-11-13 19:34:59.260 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7191/Appointment/BookNow application/x-www-form-urlencoded;+charset=UTF-8 52
+2023-11-13 19:34:59.268 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App)'
+2023-11-13 19:34:59.275 +00:00 [INF] Route matched with {action = "BookNow", controller = "Appointment", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookNow(System.String, System.String, System.String) on controller Outpatient_App.Controllers.AppointmentController (Outpatient-App).
+2023-11-13 19:34:59.353 +00:00 [INF] Executing action method Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:34:59.378 +00:00 [INF] Received request with dateOfBirth: 29/01/1988, surname: S, postcode: HU51PQ
+2023-11-13 19:34:59.392 +00:00 [INF] Formatted date for query: 1988-01-29
+2023-11-13 19:34:59.436 +00:00 [INF] Entity Framework Core 6.0.23 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.23' with options: None
+2023-11-13 19:34:59.694 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[@__trimmedSurname_0='?' (Size = 4000), @__formattedDateOfBirth_Date_1='?' (DbType = DateTime2), @__trimmedPostcode_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AppointmentID], [a].[CheckedIn], [a].[PatientID], [a].[ScheduledTime], [p].[PatientID], [p].[DateOfBirth], [p].[FirstName], [p].[HealthCardID], [p].[Postcode], [p].[Surname]
+FROM [Appointments] AS [a]
+INNER JOIN [Patients] AS [p] ON [a].[PatientID] = [p].[PatientID]
+WHERE (([p].[Surname] = @__trimmedSurname_0) AND (CONVERT(date, [a].[ScheduledTime]) = @__formattedDateOfBirth_Date_1)) AND ([p].[Postcode] = @__trimmedPostcode_2)
+2023-11-13 19:34:59.804 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__trimmedSurname_0='?' (Size = 4000), @__formattedDateOfBirth_Date_2='?' (DbType = DateTime2), @__trimmedPostcode_3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PatientID], [p].[DateOfBirth], [p].[FirstName], [p].[HealthCardID], [p].[Postcode], [p].[Surname]
+FROM [Patients] AS [p]
+WHERE (([p].[Surname] = @__trimmedSurname_0) AND (DATEDIFF(day, CONVERT(date, [p].[DateOfBirth]), @__formattedDateOfBirth_Date_2) = 0)) AND ([p].[Postcode] = @__trimmedPostcode_3)
+2023-11-13 19:34:59.824 +00:00 [INF] Patient not found. Details: Date of Birth - 1/29/1988 12:00:00 AM, Surname - S, Postcode - HU51PQ
+2023-11-13 19:34:59.828 +00:00 [INF] Executed action method Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.JsonResult in 467.1394ms.
+2023-11-13 19:34:59.848 +00:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType14`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-11-13 19:34:59.985 +00:00 [INF] Executed action Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App) in 704.3312ms
+2023-11-13 19:34:59.991 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App)'
+2023-11-13 19:35:00.002 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7191/Appointment/BookNow application/x-www-form-urlencoded;+charset=UTF-8 52 - 200 - application/json;+charset=utf-8 742.2344ms
+2023-11-13 19:47:02.113 +00:00 [INF] User profile is available. Using 'C:\Users\Bhoyee-pc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-13 19:47:03.936 +00:00 [INF] Entity Framework Core 6.0.23 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.23' with options: None
+2023-11-13 19:47:05.510 +00:00 [INF] Executed DbCommand (104ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-11-13 19:47:05.710 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-11-13 19:47:05.788 +00:00 [INF] Entity Framework Core 6.0.23 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.23' with options: None
+2023-11-13 19:47:05.810 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-11-13 19:47:06.153 +00:00 [INF] Now listening on: https://localhost:7191
+2023-11-13 19:47:06.170 +00:00 [INF] Now listening on: http://localhost:5204
+2023-11-13 19:47:06.217 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-13 19:47:06.235 +00:00 [INF] Hosting environment: Development
+2023-11-13 19:47:06.248 +00:00 [INF] Content root path: C:\Users\Bhoyee-pc\Downloads\_Projects\_c#\_asp.net-core\Outpatient-App\Outpatient-App\
+2023-11-13 19:47:07.436 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/ - -
+2023-11-13 19:47:07.816 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.Index (Outpatient-App)'
+2023-11-13 19:47:07.907 +00:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:47:08.097 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.Index (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:47:08.125 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.Index (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.9579ms.
+2023-11-13 19:47:08.170 +00:00 [INF] Executing ViewResult, running view Index.
+2023-11-13 19:47:08.996 +00:00 [INF] Executed ViewResult - view Index executed in 825.7371ms.
+2023-11-13 19:47:09.035 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.Index (Outpatient-App) in 1119.1284ms
+2023-11-13 19:47:09.049 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.Index (Outpatient-App)'
+2023-11-13 19:47:09.280 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/ - - - 200 - text/html;+charset=utf-8 1860.6491ms
+2023-11-13 19:47:09.287 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:47:09.288 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:47:09.287 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:47:09.315 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 28.5318ms
+2023-11-13 19:47:09.317 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 30.5690ms
+2023-11-13 19:47:09.399 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 111.1338ms
+2023-11-13 19:47:11.437 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Home/LanguageSelection - -
+2023-11-13 19:47:11.494 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App)'
+2023-11-13 19:47:11.504 +00:00 [INF] Route matched with {action = "LanguageSelection", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LanguageSelection() on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:47:11.552 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:47:11.561 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7573ms.
+2023-11-13 19:47:11.577 +00:00 [INF] Executing ViewResult, running view LanguageSelection.
+2023-11-13 19:47:11.764 +00:00 [INF] Executed ViewResult - view LanguageSelection executed in 190.8256ms.
+2023-11-13 19:47:11.772 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App) in 254.8237ms
+2023-11-13 19:47:11.779 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.LanguageSelection (Outpatient-App)'
+2023-11-13 19:47:11.792 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Home/LanguageSelection - - - 200 - text/html;+charset=utf-8 356.6631ms
+2023-11-13 19:47:11.902 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:47:11.910 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 8.1053ms
+2023-11-13 19:47:11.915 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:47:11.918 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:47:11.919 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 3.5560ms
+2023-11-13 19:47:11.955 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.9250ms
+2023-11-13 19:47:12.754 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Home/Disclaimer?lang=en - -
+2023-11-13 19:47:12.777 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App)'
+2023-11-13 19:47:12.813 +00:00 [INF] Route matched with {action = "Disclaimer", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Disclaimer(System.String) on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:47:12.904 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:47:12.909 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4644ms.
+2023-11-13 19:47:12.921 +00:00 [INF] Executing ViewResult, running view Disclaimer.
+2023-11-13 19:47:12.980 +00:00 [INF] Executed ViewResult - view Disclaimer executed in 60.8052ms.
+2023-11-13 19:47:12.989 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App) in 165.5498ms
+2023-11-13 19:47:12.995 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.Disclaimer (Outpatient-App)'
+2023-11-13 19:47:13.003 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Home/Disclaimer?lang=en - - - 200 - text/html;+charset=utf-8 249.0135ms
+2023-11-13 19:47:13.040 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:47:13.043 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 3.5809ms
+2023-11-13 19:47:13.046 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:47:13.046 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:47:13.050 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 4.4277ms
+2023-11-13 19:47:13.112 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 65.8070ms
+2023-11-13 19:47:13.909 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Home/Action?lang=en - -
+2023-11-13 19:47:13.915 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.HomeController.Action (Outpatient-App)'
+2023-11-13 19:47:13.921 +00:00 [INF] Route matched with {action = "Action", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Action() on controller Outpatient_App.Controllers.HomeController (Outpatient-App).
+2023-11-13 19:47:13.990 +00:00 [INF] Executing action method Outpatient_App.Controllers.HomeController.Action (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:47:13.995 +00:00 [INF] Executed action method Outpatient_App.Controllers.HomeController.Action (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4309ms.
+2023-11-13 19:47:14.006 +00:00 [INF] Executing ViewResult, running view Action.
+2023-11-13 19:47:14.054 +00:00 [INF] Executed ViewResult - view Action executed in 49.8902ms.
+2023-11-13 19:47:14.063 +00:00 [INF] Executed action Outpatient_App.Controllers.HomeController.Action (Outpatient-App) in 136.0176ms
+2023-11-13 19:47:14.073 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.HomeController.Action (Outpatient-App)'
+2023-11-13 19:47:14.082 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Home/Action?lang=en - - - 200 - text/html;+charset=utf-8 173.2984ms
+2023-11-13 19:47:14.129 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:47:14.135 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 5.7964ms
+2023-11-13 19:47:14.146 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:47:14.146 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:47:14.154 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 7.8443ms
+2023-11-13 19:47:14.179 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.9924ms
+2023-11-13 19:47:14.856 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Appointment/BookAppointment - -
+2023-11-13 19:47:14.863 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App)'
+2023-11-13 19:47:14.870 +00:00 [INF] Route matched with {action = "BookAppointment", controller = "Appointment", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookAppointment() on controller Outpatient_App.Controllers.AppointmentController (Outpatient-App).
+2023-11-13 19:47:14.939 +00:00 [INF] Executing action method Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:47:14.945 +00:00 [INF] Executed action method Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.2573ms.
+2023-11-13 19:47:14.955 +00:00 [INF] Executing ViewResult, running view BookAppointment.
+2023-11-13 19:47:15.032 +00:00 [INF] Executed ViewResult - view BookAppointment executed in 78.4494ms.
+2023-11-13 19:47:15.039 +00:00 [INF] Executed action Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App) in 162.3497ms
+2023-11-13 19:47:15.046 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.AppointmentController.BookAppointment (Outpatient-App)'
+2023-11-13 19:47:15.063 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Appointment/BookAppointment - - - 200 - text/html;+charset=utf-8 206.7357ms
+2023-11-13 19:47:15.092 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - -
+2023-11-13 19:47:15.096 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/Outpatient_App.styles.css - - - 404 0 - 3.2711ms
+2023-11-13 19:47:15.101 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 19:47:15.101 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7191/_vs/browserLink - -
+2023-11-13 19:47:15.104 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 3.4721ms
+2023-11-13 19:47:15.116 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7191/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.6249ms
+2023-11-13 19:47:29.967 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7191/Appointment/BookNow application/x-www-form-urlencoded;+charset=UTF-8 52
+2023-11-13 19:47:29.979 +00:00 [INF] Executing endpoint 'Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App)'
+2023-11-13 19:47:29.998 +00:00 [INF] Route matched with {action = "BookNow", controller = "Appointment", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult BookNow(System.String, System.String, System.String) on controller Outpatient_App.Controllers.AppointmentController (Outpatient-App).
+2023-11-13 19:47:30.120 +00:00 [INF] Executing action method Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App) - Validation state: "Valid"
+2023-11-13 19:47:30.176 +00:00 [INF] Received request with dateOfBirth: 29/01/1988, surname: S, postcode: HU51PQ
+2023-11-13 19:47:30.191 +00:00 [INF] Formatted date for query: 1/29/1988 12:00:00 AM
+2023-11-13 19:47:30.237 +00:00 [INF] Entity Framework Core 6.0.23 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.23' with options: None
+2023-11-13 19:47:30.629 +00:00 [INF] Executed DbCommand (32ms) [Parameters=[@__trimmedSurname_0='?' (Size = 4000), @__formattedDateOfBirth_Date_2='?' (DbType = DateTime2), @__trimmedPostcode_3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AppointmentID], [a].[CheckedIn], [a].[PatientID], [a].[ScheduledTime], [p].[PatientID], [p].[DateOfBirth], [p].[FirstName], [p].[HealthCardID], [p].[Postcode], [p].[Surname]
+FROM [Appointments] AS [a]
+INNER JOIN [Patients] AS [p] ON [a].[PatientID] = [p].[PatientID]
+WHERE (((@__trimmedSurname_0 = N'') OR (LEFT([p].[Surname], LEN(@__trimmedSurname_0)) = @__trimmedSurname_0)) AND (DATEDIFF(day, CONVERT(date, [p].[DateOfBirth]), @__formattedDateOfBirth_Date_2) = 0)) AND ([p].[Postcode] = @__trimmedPostcode_3)
+2023-11-13 19:47:30.672 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__trimmedSurname_0='?' (Size = 4000), @__formattedDateOfBirthForComparison_1='?' (DbType = DateTime2), @__trimmedPostcode_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PatientID], [p].[DateOfBirth], [p].[FirstName], [p].[HealthCardID], [p].[Postcode], [p].[Surname]
+FROM [Patients] AS [p]
+WHERE (([p].[Surname] = @__trimmedSurname_0) AND (CONVERT(date, [p].[DateOfBirth]) = @__formattedDateOfBirthForComparison_1)) AND ([p].[Postcode] = @__trimmedPostcode_2)
+2023-11-13 19:47:30.687 +00:00 [INF] Patient not found. Details: Date of Birth - 1/29/1988 12:00:00 AM, Surname - S, Postcode - HU51PQ
+2023-11-13 19:47:30.690 +00:00 [INF] Executed action method Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App), returned result Microsoft.AspNetCore.Mvc.JsonResult in 534.9518ms.
+2023-11-13 19:47:30.697 +00:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType14`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-11-13 19:47:30.830 +00:00 [INF] Executed action Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App) in 820.4814ms
+2023-11-13 19:47:30.836 +00:00 [INF] Executed endpoint 'Outpatient_App.Controllers.AppointmentController.BookNow (Outpatient-App)'
+2023-11-13 19:47:30.851 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7191/Appointment/BookNow application/x-www-form-urlencoded;+charset=UTF-8 52 - 200 - application/json;+charset=utf-8 884.5448ms
